@@ -2051,8 +2051,636 @@ document.querySelectorAll('.nama-entry').forEach(widget=>{
   });
 });
 </script>
+  <!DOCTYPE html>
+<html lang="sa-Latn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tridhā Darpaṇam · Module VI — Devī Māhātmyam, Madhyama &amp; Uttara Carita</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Cinzel:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg-void:#0d0906; --bg-parchment:#181109; --bg-panel:#1f160c; --bg-panel-raised:#261b0f;
+  --line-hair:#3a2c18; --gold:#c9a24b; --gold-bright:#e8c878; --gold-dim:#8a6e34;
+  --crimson:#8c2f2f; --crimson-bright:#b8433f; --rust:#a85a2e;
+  --ink:#e7dcc4; --ink-dim:#b3a480; --ink-faint:#7d7156;
+  --devanagari:'Noto Sans Devanagari', serif; --display:'Cinzel', serif;
+  --body:'Spectral', serif; --accent-serif:'Cormorant Garamond', serif;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0; background:radial-gradient(ellipse at 20% 0%, rgba(140,47,47,0.08), transparent 60%),radial-gradient(ellipse at 80% 100%, rgba(168,90,46,0.07), transparent 55%),var(--bg-void); color:var(--ink); font-family:var(--body); font-size:17px; line-height:1.75; -webkit-font-smoothing:antialiased;}
+::selection{background:var(--gold-dim); color:var(--bg-void);}
+.grain{position:fixed; inset:0; pointer-events:none; z-index:1; opacity:0.05; mix-blend-mode:overlay; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+header.masthead{position:relative; z-index:2; padding:5rem 6vw 3.5rem; border-bottom:1px solid var(--line-hair); text-align:center; background:linear-gradient(180deg, rgba(140,47,47,0.06), transparent);}
+.eyebrow{font-family:var(--display); font-size:0.72rem; letter-spacing:0.35em; text-transform:uppercase; color:var(--rust); margin-bottom:1.4rem;}
+.eyebrow::before, .eyebrow::after{content:"◆"; color:var(--gold-dim); margin:0 0.8em; font-size:0.6rem; vertical-align:middle;}
+h1.title-devanagari{font-family:var(--devanagari); font-weight:600; font-size:clamp(2.2rem,5.6vw,3.6rem); color:var(--gold-bright); margin:0 0 0.3em; letter-spacing:0.01em; text-shadow:0 0 40px rgba(200,160,75,0.15);}
+h1.title-latin{font-family:var(--display); font-weight:500; font-size:clamp(1rem,2.2vw,1.4rem); letter-spacing:0.1em; color:var(--ink-dim); margin:0 0 1.6rem; text-transform:uppercase;}
+.subtitle{font-family:var(--accent-serif); font-style:italic; font-size:1.25rem; color:var(--ink-dim); max-width:640px; margin:0 auto; line-height:1.5;}
+.module-badge{display:inline-block; margin-top:2rem; padding:0.5em 1.4em; border:1px solid var(--gold-dim); border-radius:2px; font-family:var(--display); font-size:0.72rem; letter-spacing:0.18em; color:var(--gold); background:var(--bg-panel);}
+nav.module-nav{position:sticky; top:0; z-index:10; background:rgba(13,9,6,0.94); backdrop-filter:blur(8px); border-bottom:1px solid var(--line-hair); padding:0.9rem 6vw; display:flex; gap:1.4rem; flex-wrap:wrap; align-items:center; font-family:var(--display); font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase;}
+nav.module-nav a{color:var(--ink-dim); text-decoration:none; padding:0.3em 0; border-bottom:1px solid transparent; transition:color .2s,border-color .2s;}
+nav.module-nav a:hover{color:var(--gold-bright); border-color:var(--gold-dim);}
+nav.module-nav .nav-sep{color:var(--line-hair);}
+main{max-width:900px; margin:0 auto; padding:0 6vw 8rem; position:relative; z-index:2;}
+section.chapter{padding-top:5rem; scroll-margin-top:5rem;}
+.chapter-mark{display:flex; align-items:center; gap:1.2rem; margin-bottom:0.6rem;}
+.chapter-num{font-family:var(--devanagari); font-size:2rem; color:var(--crimson-bright); font-weight:600;}
+.chapter-eyebrow{font-family:var(--display); font-size:0.7rem; letter-spacing:0.26em; text-transform:uppercase; color:var(--rust);}
+h2.chapter-title{font-family:var(--display); font-weight:600; font-size:clamp(1.5rem,3.2vw,2.15rem); color:var(--gold-bright); margin:0.3em 0 0.4em; line-height:1.25;}
+h2.chapter-title .dn{font-family:var(--devanagari); font-size:0.85em; color:var(--gold); display:block; margin-top:0.15em; font-weight:500;}
+.chapter-lede{font-family:var(--accent-serif); font-style:italic; font-size:1.18rem; color:var(--ink-dim); margin-bottom:2.2rem; max-width:65ch;}
+hr.ornament{border:none; text-align:center; margin:3rem 0; height:1.2rem;}
+hr.ornament::before{content:"❦"; color:var(--gold-dim); font-size:1.1rem;}
+h3.sub-h{font-family:var(--display); font-weight:600; font-size:1.22rem; color:var(--gold); margin:2.6rem 0 1rem; padding-bottom:0.5rem; border-bottom:1px solid var(--line-hair);}
+h4.sub-sub-h{font-family:var(--display); font-weight:600; font-size:1rem; letter-spacing:0.03em; color:var(--rust); margin:1.8rem 0 0.7rem;}
+p{margin:0 0 1.15em;}
+p.lead-para::first-letter{font-family:var(--display); font-size:3rem; float:left; line-height:0.8; padding:0.06em 0.1em 0 0; color:var(--gold-bright);}
+.skt{font-family:var(--devanagari); color:var(--gold-bright); font-size:1.08em;}
+.iast{font-style:italic; color:var(--ink);}
+.term{color:var(--gold); font-style:italic;}
+strong{color:var(--gold-bright); font-weight:600;}
+.verse-block{background:var(--bg-panel); border-left:3px solid var(--crimson); border-radius:0 4px 4px 0; padding:1.6rem 2rem; margin:1.8rem 0; position:relative;}
+.verse-block .vb-ref{position:absolute; top:0.8rem; right:1.2rem; font-family:var(--display); font-size:0.65rem; letter-spacing:0.1em; color:var(--ink-faint); text-transform:uppercase;}
+.verse-block .vb-skt{font-family:var(--devanagari); font-size:1.3rem; color:var(--gold-bright); line-height:2; margin-bottom:0.6rem;}
+.verse-block .vb-iast{font-style:italic; color:var(--ink-dim); font-size:0.96rem; margin-bottom:0.9rem; line-height:1.6;}
+.verse-block .vb-gloss{font-size:0.97rem; color:var(--ink);}
+.nama-entry{border:1px solid var(--line-hair); border-radius:6px; margin:2.2rem 0; overflow:hidden; background:var(--bg-panel);}
+.nama-head{padding:1.1rem 1.5rem; border-bottom:1px solid var(--line-hair); background:linear-gradient(180deg, rgba(200,160,75,0.07), transparent);}
+.nama-num{font-family:var(--display); font-size:0.68rem; letter-spacing:0.12em; color:var(--rust); text-transform:uppercase; display:block; margin-bottom:0.3rem;}
+.nama-skt{font-family:var(--devanagari); font-size:1.3rem; color:var(--gold-bright); display:block;}
+.nama-iast{font-family:var(--accent-serif); font-style:italic; color:var(--ink-dim); font-size:1rem;}
+.kosha-tag{display:inline-block; font-family:var(--display); font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; padding:0.25em 0.7em; border-radius:2px; border:1px solid var(--gold-dim); color:var(--gold); background:rgba(200,160,75,0.06); margin-top:0.5rem;}
+.lens-tabs{display:flex; flex-wrap:wrap; border-bottom:1px solid var(--line-hair); background:var(--bg-void);}
+.lens-tab{flex:1 1 auto; min-width:110px; padding:0.75em 1em; text-align:center; cursor:pointer; font-family:var(--display); font-size:0.68rem; letter-spacing:0.09em; text-transform:uppercase; color:var(--ink-faint); border-right:1px solid var(--line-hair); border-bottom:2px solid transparent; transition:all .2s; user-select:none;}
+.lens-tab:last-child{border-right:none;}
+.lens-tab:hover{color:var(--ink-dim); background:rgba(200,160,75,0.04);}
+.lens-tab.active{color:var(--gold-bright); border-bottom:2px solid var(--crimson-bright); background:var(--bg-panel-raised);}
+.lens-panels{padding:1.4rem 1.6rem 1.6rem;}
+.lens-panel{display:none; animation:fadeIn .25s ease;}
+.lens-panel.active{display:block;}
+@keyframes fadeIn{from{opacity:0; transform:translateY(4px);} to{opacity:1; transform:translateY(0);}}
+.lens-panel .lp-label{font-family:var(--display); font-size:0.64rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--rust); margin-bottom:0.6rem;}
+.lens-panel p{font-size:0.97rem; margin-bottom:0.8em;}
+.convergence-note{margin:0 1.6rem 1.6rem; padding:0.9rem 1.1rem; border-top:1px dashed var(--line-hair); background:rgba(140,47,47,0.05); border-radius:4px; font-size:0.92rem;}
+.cn-tag{display:inline-block; font-family:var(--display); font-size:0.62rem; letter-spacing:0.13em; text-transform:uppercase; padding:0.22em 0.65em; border-radius:2px; margin-bottom:0.5rem;}
+.cn-tag.converge{background:rgba(168,90,46,0.18); color:var(--gold-bright); border:1px solid var(--gold-dim);}
+.cn-tag.diverge{background:rgba(140,47,47,0.18); color:#e8a5a0; border:1px solid var(--crimson);}
+.cn-tag.partial{background:rgba(200,160,75,0.1); color:var(--ink-dim); border:1px solid var(--line-hair);}
+.margin-note{font-family:var(--accent-serif); font-style:italic; font-size:0.9rem; color:var(--ink-faint); border-left:2px solid var(--gold-dim); padding-left:1rem; margin:1.6rem 0;}
+.callout{margin:2rem 0; padding:1.3rem 1.6rem; border-radius:6px; border:1px solid var(--line-hair); background:var(--bg-panel-raised);}
+.callout.warn{border-color:var(--crimson);}
+.callout .callout-tag{font-family:var(--display); font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--crimson-bright); margin-bottom:0.5rem; display:block;}
+.cluster-strip{display:flex; gap:0.6rem; flex-wrap:wrap; margin:1.6rem 0 2rem;}
+.cluster-chip{font-family:var(--display); font-size:0.65rem; letter-spacing:0.08em; text-transform:uppercase; padding:0.4em 0.9em; border:1px solid var(--gold-dim); border-radius:20px; color:var(--gold); background:var(--bg-panel);}
+.god-grid{display:grid; grid-template-columns:1fr; gap:0.7rem; margin:1.8rem 0;}
+.god-row{display:grid; grid-template-columns:130px 1fr 1fr; gap:1rem; padding:0.9rem 1.2rem; background:var(--bg-panel); border:1px solid var(--line-hair); border-radius:5px; align-items:start;}
+.god-row.header-row{background:transparent; border:none; padding:0 1.2rem; font-family:var(--display); font-size:0.62rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-faint);}
+.god-name{font-family:var(--devanagari); color:var(--gold-bright); font-size:1.05rem;}
+.god-cell{font-size:0.9rem; color:var(--ink-dim); line-height:1.5;}
+footer{border-top:1px solid var(--line-hair); padding:3rem 6vw; text-align:center; font-family:var(--display); font-size:0.72rem; letter-spacing:0.14em; color:var(--ink-faint); text-transform:uppercase;}
+footer .fdn{font-family:var(--devanagari); font-size:1.05rem; color:var(--gold-dim); display:block; margin-bottom:0.8rem; letter-spacing:0.02em; text-transform:none;}
+@media(max-width:640px){main{padding:0 5vw 6rem;} header.masthead{padding:3.5rem 5vw 2.5rem;} .god-row{grid-template-columns:1fr; gap:0.4rem;} .god-row.header-row{display:none;}}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+
+<header class="masthead">
+  <div class="eyebrow">Śāstrex Vāk · Series A Extended</div>
+  <h1 class="title-devanagari">देवीमाहात्म्यम् — मध्यमोत्तरचरिते</h1>
+  <h1 class="title-latin">Devī Māhātmyam — Madhyama &amp; Uttara Carita</h1>
+  <p class="subtitle">The Mahiṣāsura episode and the Śumbha-Niśumbha/Raktabīja sequence, read through the same tri-lens template established across Modules I–V</p>
+  <div class="module-badge">Module VI · महिषासुरशुम्भनिशुम्भाख्याने — The Two Central Battles</div>
+</header>
+
+<nav class="module-nav">
+  <a href="#intro">Introduction</a><span class="nav-sep">/</span>
+  <a href="#tejas">I. The Combined Tejas</a><span class="nav-sep">/</span>
+  <a href="#weapons">II. The God-Given Regalia</a><span class="nav-sep">/</span>
+  <a href="#mahisha">III. Mahiṣāsura's Shape-Shifting Death</a><span class="nav-sep">/</span>
+  <a href="#raktabija">IV. Raktabīja &amp; the Blood-Clone Problem</a><span class="nav-sep">/</span>
+  <a href="#kali">V. Kālī and the Withdrawal of Restraint</a><span class="nav-sep">/</span>
+  <a href="#ka-tvam">VI. "Kā Tvam" — The Final Question</a>
+</nav>
+
+<main>
+
+<section class="chapter" id="intro">
+<div class="chapter-mark"><span class="chapter-eyebrow">Opening Note</span></div>
+<h2 class="chapter-title">From Sleep-Waking to Combined Radiance to Fragmenting Force<span class="dn">निद्राजागरणात् तेजःसङ्घातात् खण्डशक्तिं यावत्</span></h2>
+<p class="chapter-lede">Module V read the Prathama Carita as a study in the sleep-waking transition — a single consciousness, a single obstruction, a single resolution. The Madhyama and Uttara Caritas scale the same questions up: many consciousnesses combining into one, one adversary who multiplies faster than force can reduce him, and finally a single goddess fragmenting into many in order to out-multiply that adversary in turn. The method does not change; the material tests it against a much wider range of embodied phenomena — combined physiological arousal, self-replication as a biological and cognitive-load problem, and affect-regulation under provocation.</p>
+
+<p class="lead-para">The Madhyama Carita opens with the gods, defeated and stripped of their offices by the buffalo-demon Mahiṣāsura, converging on Brahmā, Viṣṇu, and Śiva in fury; their combined wrath is described as issuing forth as light (tejas) from each god's face, the separate radiances fusing into a single mass from which Devī's form condenses. The Uttara Carita follows the same structural logic at a further remove: Śumbha and Niśumbha, having driven the gods out a second time, provoke Devī's anger by demanding she submit to marriage; her anger this time produces not a fused composite but Kālī, a fission-product of restraint itself breaking. Between these two poles — fusion under shared threat, and fission under personal provocation — this module finds its clearest affective-neuroscience material in the entire series so far.</p>
+</section>
+
+<hr class="ornament">
+
+<section class="chapter" id="tejas">
+<div class="chapter-mark"><span class="chapter-num">१</span><span class="chapter-eyebrow">Part One — Madhyama Carita</span></div>
+<h2 class="chapter-title">The Combined Tejas: Devī's Body as a Sum of Angers<span class="dn">तेजःपुञ्जात् देवीशरीरम्</span></h2>
+<div class="cluster-strip"><span class="cluster-chip">Krodha-Saṅghāta</span><span class="cluster-chip">Composite Origin</span><span class="cluster-chip">Multi-Source Tejas</span></div>
+
+<div class="nama-entry">
+  <div class="nama-head">
+    <span class="nama-num">Structural Moment 1</span>
+    <span class="nama-skt">ततोऽतिकोपपूर्णस्य चक्रिणो वदनात्ततः । निश्चक्राम महत्तेजो ब्रह्मणः शङ्करस्य च ॥</span>
+    <span class="nama-iast">tato'tikopa-pūrṇasya cakriṇo vadanāt tataḥ &#124; niścakrāma mahat tejo brahmaṇaḥ śaṅkarasya ca &#124;&#124;</span>
+    <span class="kosha-tag">annamaya / manomaya boundary</span>
+  </div>
+  <div class="lens-tabs">
+    <div class="lens-tab active" data-tab="t1v">Vedāntic</div>
+    <div class="lens-tab" data-tab="t1p">Physiological</div>
+    <div class="lens-tab" data-tab="t1n">Neuroscientific</div>
+  </div>
+  <div class="lens-panels">
+    <div class="lens-panel active" id="t1v">
+      <div class="lp-label">Pass 1</div>
+      <p>Devī's origin in this Carita is explicitly additive and multi-source: tejas issues from Viṣṇu's face, then Brahmā's, then Śaṅkara's (Śiva's), and successively from Indra and the remaining gods, each contribution described as flowing into and merging with what preceded it until a single mountain-sized mass of light stands where separate radiances had been. This is not the single, self-existent origin the Prathama Carita gave Yoganidrā; it is composite, and the text is explicit about the ordering of contributions, which the commentarial tradition reads as each god's characteristic function (Brahmā's creative capacity, Viṣṇu's sustaining capacity, Śiva's dissolving capacity) being surrendered into a single higher unity rather than merely added like quantities. This is a narrative dramatization of a point Śaṅkara makes about the relationship between the many devatās governing particular cosmic functions and the single Īśvara-power (the saguṇa Brahman already discussed via Sarvajñā in Module IV) underlying all of them: the many functional powers are not independent, but modes of a single śakti that can, under sufficient provocation, reveal its own underlying unity by literally withdrawing from its many partial expressions back into one.</p>
+    </div>
+    <div class="lens-panel" id="t1p">
+      <div class="lp-label">Pass 2</div>
+      <p>No single organ correlate for a light emitted from the face; where the physiology is genuinely testable is in the account's insistence that the constituent radiances are angry (krodha-pūrṇa) before they merge — sustained multi-source sympathetic activation, i.e., many separate arousal events (each god's rage) summating rather than one event scaling in intensity, has a loose but real analog in the physiological phenomenon of temporal and spatial summation in autonomic response, where converging inputs from multiple pathways onto a shared effector (e.g., the adrenal medulla) can produce an output greater than any single input alone.</p>
+    </div>
+    <div class="lens-panel" id="t1n">
+      <div class="lp-label">Pass 3</div>
+      <p>The relevant neuroscience here is not about light but about affect-summation: research on emotional contagion and group-level physiological synchrony (inter-subject correlation of arousal-linked signals such as skin conductance and heart rate across co-present individuals experiencing a shared threat) documents a real convergence of multiple individual arousal states into a shared, amplified collective state, sometimes exceeding what any individual's response would be in isolation. This is a genuine and replicated finding, though it describes synchronized parallel physiology across several bodies, not a literal merging of substance, and the narrative's far stronger metaphysical claim — that the gods' separate powers are modes of one underlying śakti — is not something this synchrony research speaks to at all.</p>
+    </div>
+  </div>
+  <div class="convergence-note"><span class="cn-tag partial">Partial</span> The "many arousal sources summating into one amplified state" pattern is genuinely shared across all three passes, but the Vedāntic pass's deeper claim — that the many gods' powers are already, prior to the summation, modes of a single underlying śakti — is a metaphysical claim about ontological priority that no summation or synchrony finding in physiology or neuroscience could confirm or disconfirm.</div>
+</div>
+
+<h4 class="sub-sub-h">The Nine Contributing Tejas: A Note on Order</h4>
+<p>The Devī Māhātmyam lists the contributing gods in a specific sequence — Śiva, Viṣṇu, Brahmā, then Indra, Yama, Varuṇa, Vāyu, Agni, Sūrya, and the remaining lesser devatās — an order commentators read as moving from the three governing the cosmic functions of creation-maintenance-dissolution down through the guardians of the eight directions (aṣṭa-dikpālas) to the elemental deities. This ordering matters for the tri-lens method only in a limited, honest way: it establishes a hierarchy of contribution that later determines which weapon each god gives (§II below), but the ordering itself is cosmological classification, not a claim with an anatomical or neural correlate, and this series does not force one.</p>
+</section>
+
+<hr class="ornament">
+
+<section class="chapter" id="weapons">
+<div class="chapter-mark"><span class="chapter-num">२</span><span class="chapter-eyebrow">Part Two — Madhyama Carita</span></div>
+<h2 class="chapter-title">The God-Given Regalia: Distributed Function Reassembled<span class="dn">देवदत्तायुधानि</span></h2>
+<p class="chapter-lede">Once formed, Devī receives from each god the weapon or emblem most closely associated with that god's own characteristic power — Śiva's triśūla, Viṣṇu's cakra, Indra's vajra, and others — a distribution list this series reads as a second and more granular instance of the composite-origin logic just established.</p>
+
+<div class="god-grid">
+  <div class="god-row header-row"><div>Donor</div><div>Gift</div><div>Reading</div></div>
+  <div class="god-row"><div class="god-name">शिव<span style="display:block;font-family:var(--display);font-size:0.6rem;color:var(--rust);">Śiva</span></div><div class="god-cell">Triśūla (trident)</div><div class="god-cell">Read across the series' companion Śāstrex Vāk material as the icchā-jñāna-kriyā triad (will-knowledge-action) given concrete iconographic form — three tines, one shaft, echoing the tri-lens method's own three-passes-one-referent structure.</div></div>
+  <div class="god-row"><div class="god-name">विष्णु<span style="display:block;font-family:var(--display);font-size:0.6rem;color:var(--rust);">Viṣṇu</span></div><div class="god-cell">Sudarśana cakra (discus)</div><div class="god-cell">A rotational, self-returning weapon — commentators read the discus's return-to-hand motion as figuring saṁsāra's own cyclical structure, wielded rather than merely suffered.</div></div>
+  <div class="god-row"><div class="god-name">इन्द्र<span style="display:block;font-family:var(--display);font-size:0.6rem;color:var(--rust);">Indra</span></div><div class="god-cell">Vajra (thunderbolt)</div><div class="god-cell">Traditionally forged from sage Dadhīci's bones — an emblem of a power purchased through prior voluntary sacrifice, not raw force.</div></div>
+  <div class="god-row"><div class="god-name">वरुण<span style="display:block;font-family:var(--display);font-size:0.6rem;color:var(--rust);">Varuṇa</span></div><div class="god-cell">Śaṅkha (conch) and pāśa (noose)</div><div class="god-cell">The same pāśa-as-rāga identity established for the Sahasranāma's nāma 24 (Module II) recurs here in narrative rather than epithet form.</div></div>
+  <div class="god-row"><div class="god-name">अग्नि<span style="display:block;font-family:var(--display);font-size:0.6rem;color:var(--rust);">Agni</span></div><div class="god-cell">Śakti (spear)</div><div class="god-cell">Continues the cidagni identity established at Sahasranāma nāma 4 (Module II) — fire as consciousness's own instrument, not ordinary combustion.</div></div>
+</div>
+
+<div class="callout">
+<span class="callout-tag">Method Note — Why This Table Gets No Fourth Column</span>
+Unlike the Saundaryalaharī cakra table (Module I, §2.2), this distribution list is not given a physiological or neuroscientific column, because — per Method Rule 1 — each weapon-gift is a vastu-to-vijñānamaya-level claim about which cosmic function is being lent to Devī's composite form, not a claim about any specific bodily structure or measurable neural process. Forcing a fourth column here would be exactly the strained mapping Module I warned against; the honest move is to note plainly that this table has no anatomical or neural correlate to offer, and to move to the next structural moment, where the text does make a concretely embodied claim.</div>
+
+</section>
+
+<hr class="ornament">
+
+<section class="chapter" id="mahisha">
+<div class="chapter-mark"><span class="chapter-num">३</span><span class="chapter-eyebrow">Part Three — Madhyama Carita</span></div>
+<h2 class="chapter-title">Mahiṣāsura's Shape-Shifting Death: The Boon That Cannot Be Outrun by Force Alone<span class="dn">महिषासुरस्य रूपपरिवर्तनं मरणं च</span></h2>
+
+<div class="nama-entry">
+  <div class="nama-head">
+    <span class="nama-num">Structural Moment 2</span>
+    <span class="nama-skt">कदाचित्महिषो भूत्वा कदाचित्पुरुषाकृतिः । कदाचित्सिंहरूपेण चरन्तं क्षितिमण्डले ॥</span>
+    <span class="nama-iast">kadācit mahiṣo bhūtvā kadācit puruṣākṛtiḥ &#124; kadācit siṁha-rūpeṇa carantaṁ kṣiti-maṇḍale &#124;&#124;</span>
+    <span class="kosha-tag">manomaya</span>
+  </div>
+  <div class="lens-tabs">
+    <div class="lens-tab active" data-tab="m1v">Vedāntic</div>
+    <div class="lens-tab" data-tab="m1p">Physiological</div>
+    <div class="lens-tab" data-tab="m1n">Neuroscientific</div>
+  </div>
+  <div class="lens-panels">
+    <div class="lens-panel active" id="m1v">
+      <div class="lp-label">Pass 1</div>
+      <p>Mahiṣāsura's boon grants him the ability to shift form at will — buffalo, man, lion, elephant — precisely in order to evade the specific mode of attack suited to whichever form Devī currently faces him in. Commentators read this shape-shifting allegorically as the mind's own capacity to relocate an obstruction (avidyā, ignorance, here personified) from one register of experience to another whenever it is directly confronted — exactly the maneuver Śaṅkara warns of when he insists (Vivekacūḍāmaṇi, opening diagnosis of why viveka is rare) that ignorance is not defeated piecemeal, form by form, because it will simply reconstitute itself in a subtler register each time a grosser one is refuted. The battle's resolution, accordingly, does not come until Devī catches Mahiṣāsura in the single vulnerable moment of transition itself — half-emerged from the buffalo form, not yet fully human — which the tradition reads as the text's own acknowledgment that ignorance is most exposed not in any of its stable forms but in the instant of shifting between them.</p>
+    </div>
+    <div class="lens-panel" id="m1p">
+      <div class="lp-label">Pass 2</div>
+      <p>No literal anatomical correlate for form-shifting itself; the physiologically relevant detail is narrower and more specific — the text's insistence that Mahiṣāsura is most vulnerable mid-transition, neither fully buffalo nor fully human, has a loose structural analog in the simple biomechanical fact that an organism transitioning between postural or locomotor configurations (e.g., quadrupedal to bipedal stance) passes through a genuinely less stable, lower-leverage intermediate state, measurably more exposed to disruption than either stable configuration.</p>
+    </div>
+    <div class="lens-panel" id="m1n">
+      <div class="lp-label">Pass 3</div>
+      <p>The more interesting neuroscience parallel concerns cognitive rather than postural transition: research on task-switching costs demonstrates that the brief interval during which an executive system reconfigures from one task-set or behavioral mode to another is measurably associated with degraded performance and slowed response — a "switch cost" that is one of the more robust findings in cognitive control research. The narrative's insight that an adversary who relies on shifting registers is most exposed during the shift itself maps structurally onto this well-replicated switch-cost literature, though the switch-cost research concerns milliseconds of executive reconfiguration in a single task-performing brain, a vastly smaller and more literal claim than the narrative's cosmological register-shifting.</p>
+    </div>
+  </div>
+  <div class="convergence-note"><span class="cn-tag partial">Partial</span> A genuine structural parallel holds across all three passes — transition states are more vulnerable than stable states, whether the transition is postural, cognitive-executive, or (in the Vedāntic register) a shift between registers of ignorance — but the switch-cost and postural-transition literatures address concrete, small-scale, mechanistically distinct phenomena, and neither addresses the metaphysical content of avidyā the Vedāntic pass is actually naming.</div>
+</div>
+</section>
+
+<hr class="ornament">
+
+<section class="chapter" id="raktabija">
+<div class="chapter-mark"><span class="chapter-num">४</span><span class="chapter-eyebrow">Part Four — Uttara Carita</span></div>
+<h2 class="chapter-title">Raktabīja: Self-Replication as an Escalating Interoceptive Threat<span class="dn">रक्तबीजस्य आत्मबहुत्वम्</span></h2>
+<div class="cluster-strip"><span class="cluster-chip">Blood-Clone Boon</span><span class="cluster-chip">Exponential Threat</span><span class="cluster-chip">Cāmuṇḍā's Solution</span></div>
+
+<div class="nama-entry">
+  <div class="nama-head">
+    <span class="nama-num">Structural Moment 3</span>
+    <span class="nama-skt">यत्र यत्र पतत्येव तद्रक्तं भूतले तदा । समुत्पतन्ति सहसा तत्प्रमाणास्तदासुराः ॥</span>
+    <span class="nama-iast">yatra yatra patati eva tad-raktaṁ bhūtale tadā &#124; samutpatanti sahasā tat-pramāṇās tad-asurāḥ &#124;&#124;</span>
+    <span class="kosha-tag">annamaya, with sharp manomaya escalation</span>
+  </div>
+  <div class="lens-tabs">
+    <div class="lens-tab active" data-tab="r1v">Vedāntic</div>
+    <div class="lens-tab" data-tab="r1p">Physiological</div>
+    <div class="lens-tab" data-tab="r1n">Neuroscientific</div>
+  </div>
+  <div class="lens-panels">
+    <div class="lens-panel active" id="r1v">
+      <div class="lp-label">Pass 1</div>
+      <p>Raktabīja's boon is that every drop of his blood which touches the ground instantly gives rise to a duplicate demon of equal size and strength — meaning conventional wounding literally multiplies the threat rather than reducing it. This is arguably the single sharpest narrative image in the entire Devī Māhātmyam for a point Śaṅkara makes about vāsanās (latent impressions/habitual tendencies): they are not exhausted by being expressed or "released," and an approach that treats venting or discharging a tendency as equivalent to removing it in fact multiplies the tendency's occasions for reinforcement, since each expression leaves its own further trace. The text's solution — Kālī drinking the blood before it touches the ground, preventing contact with the "field" (bhūtala, the ground/earth) that would allow germination — allegorizes the only strategy Vedānta considers actually effective against vāsanā: not suppression or violent discharge, but interception prior to the trace's uptake into future conditioning, which in Śaṅkara's own vocabulary is closer to jñāna (a change in the knowing that prevents the trace from taking root) than to any effortful counter-action.</p>
+    </div>
+    <div class="lens-panel" id="r1p">
+      <div class="lp-label">Pass 2</div>
+      <p>No literal physiological process replicates an organism from a blood droplet; the narrative image inverts ordinary wound physiology (in which blood loss weakens an organism) into its opposite for allegorical effect, and this series does not strain to find a hidden anatomical mechanism where the text's own logic is explicitly counter-physiological and fantastic by design.</p>
+    </div>
+    <div class="lens-panel" id="r1n">
+      <div class="lp-label">Pass 3</div>
+      <p>The productive neuroscience parallel here is not biological replication but a cognitive-behavioral one: research on thought-suppression and habit reinforcement (the well-documented "ironic process" literature, alongside behavioral findings that punishment or forceful suppression of a habitual response pattern frequently increases its later frequency compared to non-reactive extinction-based approaches) describes a structurally similar paradox — direct, forceful opposition to an unwanted pattern can increase its occurrence, while a different kind of intervention (extinction, or in the clinical literature, acceptance-based strategies that avoid reactive suppression) reduces it. This is a genuine, well-supported finding about how certain interventions backfire, though it concerns habitual thought and behavior patterns in a single brain, not the cosmological scope of vāsanā the Vedāntic pass intends, and the analogy should be read as structural, not as neuroscience "explaining" Raktabīja.</p>
+    </div>
+  </div>
+  <div class="convergence-note"><span class="cn-tag partial">Partial</span> The core structural insight — that forceful opposition to a self-propagating pattern can multiply rather than reduce it, and that only a different kind of intervention (interception prior to reinforcement, not more force) actually works — is shared with real precision across the Vedāntic and cognitive-behavioral passes. Physiology contributes nothing here, and the two remaining passes are answering questions at very different scales, so this stays short of Converge.</div>
+</div>
+</section>
+
+<hr class="ornament">
+
+<section class="chapter" id="kali">
+<div class="chapter-mark"><span class="chapter-num">५</span><span class="chapter-eyebrow">Part Five — Uttara Carita</span></div>
+<h2 class="chapter-title">Kālī's Emergence: Anger as Fission Rather Than Fusion<span class="dn">काल्युत्पत्तिः — संघातात् खण्डनं प्रति</span></h2>
+
+<div class="nama-entry">
+  <div class="nama-head">
+    <span class="nama-num">Structural Moment 4</span>
+    <span class="nama-skt">भ्रुकुटीकुटिलात्तस्या ललाटफलकाद्द्रुतम् । काली करालवदना विनिष्क्रान्तासिपाशिनी ॥</span>
+    <span class="nama-iast">bhrukuṭī-kuṭilāt tasyā lalāṭa-phalakād drutam &#124; kālī karāla-vadanā viniṣkrāntā asi-pāśinī &#124;&#124;</span>
+    <span class="kosha-tag">manomaya, sharply annamaya-adjacent</span>
+  </div>
+  <div class="lens-tabs">
+    <div class="lens-tab active" data-tab="k1v">Vedāntic</div>
+    <div class="lens-tab" data-tab="k1p">Physiological</div>
+    <div class="lens-tab" data-tab="k1n">Neuroscientific</div>
+  </div>
+  <div class="lens-panels">
+    <div class="lens-panel active" id="k1v">
+      <div class="lp-label">Pass 1</div>
+      <p>Where the Madhyama Carita's origin moment was fusion — many gods' tejas converging into one Devī — Kālī's emergence is fission: she springs specifically from the knitting of Devī's brow (bhrukuṭī, the same bhrūmadhya/ājñā location established at Sahasranāma nāma 34 in Module II), a single localized point of contracted anger giving rise to a distinct, terrible-faced, separately acting form. This is worth flagging as a structural inversion the series has not yet encountered: composite origin under external threat produces unity; personal provocation (Śumbha's marriage demand, read across the tradition as an assault specifically on Devī's autonomy) produces fragmentation. The Vedāntic point being dramatized is that anger's object matters to its phenomenology — anger mobilized in defense of another (the gods, in the Madhyama Carita) integrates; anger provoked by a direct personal violation externalizes and separates, producing a form (Kālī) who subsequently acts with a degree of autonomy from Devī herself that the narrative has to explicitly reconcile at the episode's end.</p>
+    </div>
+    <div class="lens-panel" id="k1p">
+      <div class="lp-label">Pass 2</div>
+      <p>The brow-knitting (bhrukuṭī) that precipitates Kālī's emergence is, at the literal physiological level, simply the corrugator supercilii and procerus muscle contraction producing a frown — a genuine, well-characterized facial-motor correlate of anger and threat-appraisal recognized across facial-action-coding research, and one of the most reliably identified single-muscle-group correlates of a specific emotional state available in the entire physiology literature.</p>
+    </div>
+    <div class="lens-panel" id="k1n">
+      <div class="lp-label">Pass 3</div>
+      <p>Beyond the facial-motor correlate, the more substantive neuroscience angle concerns the narrative's claim that personally-directed provocation produces a qualitatively different, more autonomous-acting response than threat-defense anger does: affective neuroscience distinguishes reactive/impulsive aggression (associated with amygdala-driven threat response with reduced prefrontal regulatory engagement) from instrumental or goal-directed aggression (associated with greater prefrontal-cortical involvement in planning and control) — a genuine, if provisional, dissociation in the literature that maps loosely onto the narrative's distinction between the composite, coordinated Madhyama Carita origin and Kālī's comparatively unregulated, self-directed rampage in the episode that follows (during which, notably, Devī herself must intervene to stop Kālī, a detail this series reads as the narrative's own acknowledgment that this second form of anger required external regulation the first did not).</p>
+    </div>
+  </div>
+  <div class="convergence-note"><span class="cn-tag partial">Partial</span> The brow-muscle correlate for anger (Pass 2) is essentially a Converge-strength finding on its own, but the larger and more interesting claim — that personally-provoked anger produces a less regulated, more autonomous response requiring subsequent external correction — is only loosely and provisionally supported by the reactive/instrumental aggression distinction in the neuroscience literature, so the entry as a whole is tagged Partial rather than Converge.</div>
+</div>
+</section>
+
+<hr class="ornament">
+
+<section class="chapter" id="ka-tvam">
+<div class="chapter-mark"><span class="chapter-num">६</span><span class="chapter-eyebrow">Part Six — Uttara Carita, Closing</span></div>
+<h2 class="chapter-title">"Kā Tvam" — Śumbha's Final Question and the Vastu-Level Close<span class="dn">एकाहं जगत्यत्र द्वितीयः कः</span></h2>
+<p class="chapter-lede">The Uttara Carita's climactic exchange is verbal, not martial: Śumbha, in the final duel, accuses Devī of false pride, claiming she fights only because she is not truly alone — that the many goddesses (Kālī, the Mātṛkās, and the rest) who have appeared throughout the battle are proof she required help. Her answer is the text's clearest vastu-level statement outside the Sahasranāma's mahāvākya cluster.</p>
+
+<div class="nama-entry">
+  <div class="nama-head">
+    <span class="nama-num">Structural Moment 5</span>
+    <span class="nama-skt">एकैवाहं जगत्यत्र द्वितीया का ममापरा । पश्यैता दुष्ट मय्येव विशन्त्यो मद्विभूतयः ॥</span>
+    <span class="nama-iast">ekaiva ahaṁ jagaty atra dvitīyā kā mama aparā &#124; paśya etā duṣṭa mayy eva viśantyo mad-vibhūtayaḥ &#124;&#124;</span>
+    <span class="kosha-tag">vastu-level</span>
+  </div>
+  <div class="lens-tabs">
+    <div class="lens-tab active" data-tab="q1v">Vedāntic</div>
+    <div class="lens-tab" data-tab="q1p">Physiological</div>
+    <div class="lens-tab" data-tab="q1n">Neuroscientific</div>
+  </div>
+  <div class="lens-panels">
+    <div class="lens-panel active" id="q1v">
+      <div class="lp-label">Pass 1</div>
+      <p>"I alone exist in this world; who else is there, second to me? Behold, O wicked one, these — Kālī, the Mātṛkās, and the rest — as they now re-enter into me, for they are only my own manifestations (vibhūtayaḥ)." As she speaks, the text has the multiplied forms visibly dissolve back into her single body before Śumbha is slain. This is the entire series' clearest single narrative enactment of the mahāvākya register already met at Sahasranāma nāma 999 (Prajñānaghanarūpiṇī, Module III): the many forms that fought — composite tejas, Kālī, the Mātṛkās — were never independent seconds to Devī, only her own dṛśya-level self-multiplications for the specific purposes of the battle, retracted the instant the apavāda (retraction) becomes narratively necessary. Śumbha's error, on this reading, is exactly the error Method Rule 1 (Module I, §1.1) is built to prevent: mistaking a conditioned, multiplicity-generating display for evidence against the substrate's non-duality, rather than recognizing the display as itself dependent on and reabsorbable into that substrate.</p>
+    </div>
+    <div class="lens-panel" id="q1p">
+      <div class="lp-label">Pass 2</div>
+      <p>No anatomical correlate is proposed for a vastu-level identity claim, consistent with every prior instance of this register across the series (Module II's Śrīmātā, Module III's Prajñānaghanarūpiṇī).</p>
+    </div>
+    <div class="lens-panel" id="q1n">
+      <div class="lp-label">Pass 3</div>
+      <p>No neural correlate is proposed for the same reason. It is worth noting explicitly, given this module's several genuine Partial/Converge findings on group-level physiological synchrony (§I above) and multi-agent affective states, that none of that research bears on this specific closing claim — synchrony research describes multiple distinct nervous systems correlating, which is a claim entirely at the dṛśya level about several conditioned bodies, whereas "who else is there, second to me" is a claim about there being, at the deepest level, only one unconditioned substrate of which even the appearance of multiple agents is a mode. Conflating the two would repeat exactly the error Module I's Worked Example C and Module III's mahāvākya entry were built to flag.</p>
+    </div>
+  </div>
+  <div class="convergence-note"><span class="cn-tag diverge">Diverge</span> The clearest and most dramatically staged Diverge tag in the narrative material covered so far — deliberately so, since the text stages the retraction of multiplicity into unity as its own climactic gesture, immediately after a sequence (Raktabīja, Kālī) that this module's tri-lens readings found unusually rich physiological and neuroscientific footholds for. The juxtaposition is instructive: the same episode-cluster can move from its strongest Partial/Converge material directly into its sharpest Diverge, and the honest convergence note has to track that shift rather than smoothing it into a uniform verdict.</div>
+</div>
+
+<div class="callout warn">
+<span class="callout-tag">Module VI Closing Tally</span>
+Across the six structural moments surveyed — the combined tejas, the weapon-distribution (no correlate offered by design), Mahiṣāsura's shape-shifting death, Raktabīja's self-replication, Kālī's emergence, and Śumbha's final question — the distribution runs two Partial-with-no-correlate-attempted (the weapons table), three Partial (tejas-fusion, shape-shift vulnerability, Raktabīja), one Partial-bordering-Converge (Kālī's brow-correlate specifically), and one sharp Diverge (the closing mahāvākya moment). This is broadly consistent with Module V's finding that narrative material describing embodied action yields more numerous footholds than purely theological material — except that this module's single most dramatic moment is itself the theological retraction of everything embodied that came before, which is precisely why it closes on Diverge rather than Partial. Module VII's synthesis chapter takes up this recurring end-of-narrative-arc pattern directly.
+</div>
+
+</section>
+
+</main>
+
+<footer>
+  <span class="fdn">इति षष्ठं प्रकरणम्</span>
+  Tridhā Darpaṇam · Module VI of VII · shastrasextvakfive.culturalmusings.com · Cultural Musings Research
+</footer>
+
+<script>
+document.querySelectorAll('.nama-entry').forEach(widget=>{
+  const tabs = widget.querySelectorAll('.lens-tab');
+  const panels = widget.querySelectorAll('.lens-panel');
+  tabs.forEach(tab=>{
+    tab.addEventListener('click', ()=>{
+      const target = tab.getAttribute('data-tab');
+      tabs.forEach(t=>t.classList.remove('active'));
+      panels.forEach(p=>p.classList.remove('active'));
+      tab.classList.add('active');
+      widget.querySelector('#'+target).classList.add('active');
+    });
+  });
+});
+</script>
+  <!DOCTYPE html>
+<html lang="sa-Latn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tridhā Darpaṇam · Module VII — Synthesis: What the Distribution Shows</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Cinzel:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg-void:#0d0906; --bg-parchment:#181109; --bg-panel:#1f160c; --bg-panel-raised:#261b0f;
+  --line-hair:#3a2c18; --gold:#c9a24b; --gold-bright:#e8c878; --gold-dim:#8a6e34;
+  --crimson:#8c2f2f; --crimson-bright:#b8433f; --rust:#a85a2e;
+  --ink:#e7dcc4; --ink-dim:#b3a480; --ink-faint:#7d7156;
+  --devanagari:'Noto Sans Devanagari', serif; --display:'Cinzel', serif;
+  --body:'Spectral', serif; --accent-serif:'Cormorant Garamond', serif;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0; background:radial-gradient(ellipse at 20% 0%, rgba(140,47,47,0.08), transparent 60%),radial-gradient(ellipse at 80% 100%, rgba(168,90,46,0.07), transparent 55%),var(--bg-void); color:var(--ink); font-family:var(--body); font-size:17px; line-height:1.75; -webkit-font-smoothing:antialiased;}
+::selection{background:var(--gold-dim); color:var(--bg-void);}
+.grain{position:fixed; inset:0; pointer-events:none; z-index:1; opacity:0.05; mix-blend-mode:overlay; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+header.masthead{position:relative; z-index:2; padding:5rem 6vw 3.5rem; border-bottom:1px solid var(--line-hair); text-align:center; background:linear-gradient(180deg, rgba(140,47,47,0.06), transparent);}
+.eyebrow{font-family:var(--display); font-size:0.72rem; letter-spacing:0.35em; text-transform:uppercase; color:var(--rust); margin-bottom:1.4rem;}
+.eyebrow::before, .eyebrow::after{content:"◆"; color:var(--gold-dim); margin:0 0.8em; font-size:0.6rem; vertical-align:middle;}
+h1.title-devanagari{font-family:var(--devanagari); font-weight:600; font-size:clamp(2.2rem,5.6vw,3.6rem); color:var(--gold-bright); margin:0 0 0.3em; letter-spacing:0.01em; text-shadow:0 0 40px rgba(200,160,75,0.15);}
+h1.title-latin{font-family:var(--display); font-weight:500; font-size:clamp(1rem,2.2vw,1.4rem); letter-spacing:0.1em; color:var(--ink-dim); margin:0 0 1.6rem; text-transform:uppercase;}
+.subtitle{font-family:var(--accent-serif); font-style:italic; font-size:1.25rem; color:var(--ink-dim); max-width:640px; margin:0 auto; line-height:1.5;}
+.module-badge{display:inline-block; margin-top:2rem; padding:0.5em 1.4em; border:1px solid var(--gold-dim); border-radius:2px; font-family:var(--display); font-size:0.72rem; letter-spacing:0.18em; color:var(--gold); background:var(--bg-panel);}
+nav.module-nav{position:sticky; top:0; z-index:10; background:rgba(13,9,6,0.94); backdrop-filter:blur(8px); border-bottom:1px solid var(--line-hair); padding:0.9rem 6vw; display:flex; gap:1.4rem; flex-wrap:wrap; align-items:center; font-family:var(--display); font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase;}
+nav.module-nav a{color:var(--ink-dim); text-decoration:none; padding:0.3em 0; border-bottom:1px solid transparent; transition:color .2s,border-color .2s;}
+nav.module-nav a:hover{color:var(--gold-bright); border-color:var(--gold-dim);}
+nav.module-nav .nav-sep{color:var(--line-hair);}
+main{max-width:900px; margin:0 auto; padding:0 6vw 8rem; position:relative; z-index:2;}
+section.chapter{padding-top:5rem; scroll-margin-top:5rem;}
+.chapter-mark{display:flex; align-items:center; gap:1.2rem; margin-bottom:0.6rem;}
+.chapter-num{font-family:var(--devanagari); font-size:2rem; color:var(--crimson-bright); font-weight:600;}
+.chapter-eyebrow{font-family:var(--display); font-size:0.7rem; letter-spacing:0.26em; text-transform:uppercase; color:var(--rust);}
+h2.chapter-title{font-family:var(--display); font-weight:600; font-size:clamp(1.5rem,3.2vw,2.15rem); color:var(--gold-bright); margin:0.3em 0 0.4em; line-height:1.25;}
+h2.chapter-title .dn{font-family:var(--devanagari); font-size:0.85em; color:var(--gold); display:block; margin-top:0.15em; font-weight:500;}
+.chapter-lede{font-family:var(--accent-serif); font-style:italic; font-size:1.18rem; color:var(--ink-dim); margin-bottom:2.2rem; max-width:65ch;}
+hr.ornament{border:none; text-align:center; margin:3rem 0; height:1.2rem;}
+hr.ornament::before{content:"❦"; color:var(--gold-dim); font-size:1.1rem;}
+h3.sub-h{font-family:var(--display); font-weight:600; font-size:1.22rem; color:var(--gold); margin:2.6rem 0 1rem; padding-bottom:0.5rem; border-bottom:1px solid var(--line-hair);}
+h4.sub-sub-h{font-family:var(--display); font-weight:600; font-size:1rem; letter-spacing:0.03em; color:var(--rust); margin:1.8rem 0 0.7rem;}
+p{margin:0 0 1.15em;}
+p.lead-para::first-letter{font-family:var(--display); font-size:3rem; float:left; line-height:0.8; padding:0.06em 0.1em 0 0; color:var(--gold-bright);}
+.skt{font-family:var(--devanagari); color:var(--gold-bright); font-size:1.08em;}
+.iast{font-style:italic; color:var(--ink);}
+.term{color:var(--gold); font-style:italic;}
+strong{color:var(--gold-bright); font-weight:600;}
+.margin-note{font-family:var(--accent-serif); font-style:italic; font-size:0.9rem; color:var(--ink-faint); border-left:2px solid var(--gold-dim); padding-left:1rem; margin:1.6rem 0;}
+.callout{margin:2rem 0; padding:1.3rem 1.6rem; border-radius:6px; border:1px solid var(--line-hair); background:var(--bg-panel-raised);}
+.callout.warn{border-color:var(--crimson);}
+.callout .callout-tag{font-family:var(--display); font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--crimson-bright); margin-bottom:0.5rem; display:block;}
+.cn-tag{display:inline-block; font-family:var(--display); font-size:0.62rem; letter-spacing:0.13em; text-transform:uppercase; padding:0.22em 0.65em; border-radius:2px; margin-bottom:0.5rem;}
+.cn-tag.converge{background:rgba(168,90,46,0.18); color:var(--gold-bright); border:1px solid var(--gold-dim);}
+.cn-tag.diverge{background:rgba(140,47,47,0.18); color:#e8a5a0; border:1px solid var(--crimson);}
+.cn-tag.partial{background:rgba(200,160,75,0.1); color:var(--ink-dim); border:1px solid var(--line-hair);}
+
+/* Tally table */
+.tally-table{width:100%; border-collapse:collapse; margin:2rem 0; font-size:0.95rem;}
+.tally-table th{font-family:var(--display); font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-faint); text-align:left; padding:0.7rem 1rem; border-bottom:1px solid var(--line-hair);}
+.tally-table td{padding:0.8rem 1rem; border-bottom:1px solid var(--line-hair); color:var(--ink-dim); vertical-align:top;}
+.tally-table tr:last-child td{border-bottom:none;}
+.tally-table td.tt-unit{color:var(--gold-bright); font-family:var(--accent-serif); font-style:italic;}
+.tally-table td.tt-num{font-family:var(--display); color:var(--gold); text-align:center;}
+.tally-wrap{overflow-x:auto;}
+
+/* Bar chart, pure CSS */
+.bar-chart{margin:2rem 0; display:flex; flex-direction:column; gap:0.9rem;}
+.bar-row{display:grid; grid-template-columns:170px 1fr 50px; gap:0.9rem; align-items:center;}
+.bar-label{font-family:var(--display); font-size:0.72rem; letter-spacing:0.06em; color:var(--ink-dim); text-align:right;}
+.bar-track{background:var(--bg-panel); border:1px solid var(--line-hair); border-radius:3px; height:22px; overflow:hidden; position:relative;}
+.bar-fill{height:100%; display:flex;}
+.bar-seg.converge{background:var(--gold-dim);}
+.bar-seg.partial{background:var(--rust);}
+.bar-seg.diverge{background:var(--crimson);}
+.bar-total{font-family:var(--display); font-size:0.72rem; color:var(--ink-faint);}
+.bar-legend{display:flex; gap:1.4rem; margin:1rem 0 2rem; flex-wrap:wrap; font-family:var(--display); font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-dim);}
+.bar-legend span{display:inline-flex; align-items:center; gap:0.4em;}
+.bar-legend i{width:11px; height:11px; display:inline-block; border-radius:2px;}
+.bar-legend i.converge{background:var(--gold-dim);}
+.bar-legend i.partial{background:var(--rust);}
+.bar-legend i.diverge{background:var(--crimson);}
+
+footer{border-top:1px solid var(--line-hair); padding:3rem 6vw; text-align:center; font-family:var(--display); font-size:0.72rem; letter-spacing:0.14em; color:var(--ink-faint); text-transform:uppercase;}
+footer .fdn{font-family:var(--devanagari); font-size:1.05rem; color:var(--gold-dim); display:block; margin-bottom:0.8rem; letter-spacing:0.02em; text-transform:none;}
+@media(max-width:640px){main{padding:0 5vw 6rem;} header.masthead{padding:3.5rem 5vw 2.5rem;} .bar-row{grid-template-columns:100px 1fr 40px;} .tally-table{font-size:0.85rem;}}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+
+<header class="masthead">
+  <div class="eyebrow">Śāstrex Vāk · Series A Extended</div>
+  <h1 class="title-devanagari">त्रिधा दर्पणम् — उपसंहारः</h1>
+  <h1 class="title-latin">Tridhā Darpaṇam — Synthesis</h1>
+  <p class="subtitle">What the Converge / Partial / Diverge distribution, tallied across the Sahasranāma, Triśatī, and Saptaśatī, actually indicates about where Śākta literature is making testable claims</p>
+  <div class="module-badge">Module VII · उपसंहारप्रकरणम् — The Closing Synthesis</div>
+</header>
+
+<nav class="module-nav">
+  <a href="#intro">Introduction</a><span class="nav-sep">/</span>
+  <a href="#method-caveat">I. What This Tally Can and Cannot Claim</a><span class="nav-sep">/</span>
+  <a href="#distribution">II. The Distribution by Text</a><span class="nav-sep">/</span>
+  <a href="#kosha-correlation">III. Kośa-Depth as the Real Predictor</a><span class="nav-sep">/</span>
+  <a href="#strongest">IV. The Strongest Converge Cases, Compared</a><span class="nav-sep">/</span>
+  <a href="#closing">V. What Diverge Is For</a>
+</nav>
+
+<main>
+
+<section class="chapter" id="intro">
+<div class="chapter-mark"><span class="chapter-eyebrow">Opening Note</span></div>
+<h2 class="chapter-title">Closing a Method, Not Closing a Question<span class="dn">पद्धतिसमापनं न प्रश्नसमापनम्</span></h2>
+<p class="chapter-lede">Module I promised that this chapter would tally the actual distribution of Converge, Partial, and Diverge tags across roughly two thousand analytical units and ask what that distribution indicates. Delivered honestly, across the first-delivery material this series has produced through Module VI, the tally is necessarily partial — a representative sample rather than an exhaustive run of all thousand-plus names, three hundred Triśatī entries, and seven hundred Saptaśatī verses, most of which remain for future deliveries within Modules II through VI to complete. What follows tallies what has actually been produced so far, treats that sample honestly as a sample, and draws only the conclusions the sample supports.</p>
+
+<p class="lead-para">The headline finding, stated first rather than built up to: kośa-depth predicts convergence far better than which text a name comes from. A manomaya or annamaya-tagged unit from the Sahasranāma converges about as reliably as a manomaya-tagged structural moment from the Devī Māhātmyam; a vastu-level unit diverges reliably whether it appears in the Sahasranāma's mahāvākya cluster, the Triśatī's kāma-cluster, or the Māhātmyam's closing "kā tvam" exchange. This is, in a modest way, evidence that the pañcakośa scheme Module I borrowed from the Vivekacūḍāmaṇi is doing genuine classificatory work rather than merely providing decorative vocabulary — it is predicting, in advance of the specific tri-lens analysis, which entries will find empirical footholds and which will not.</p>
+</section>
+
+<hr class="ornament">
+
+<section class="chapter" id="method-caveat">
+<div class="chapter-mark"><span class="chapter-num">१</span><span class="chapter-eyebrow">Part One</span></div>
+<h2 class="chapter-title">What This Tally Can and Cannot Claim<span class="dn">गणनायाः मर्यादा</span></h2>
+
+<div class="callout warn">
+<span class="callout-tag">Sampling Caveat, Stated Plainly</span>
+This tally covers the worked entries actually delivered in Modules I through VI: three worked examples in Module I, roughly a dozen nāma-entries across Module II's first delivery, several Part-B entries in Module III, five entries across Module IV's three bīja-clusters, five structural moments in Module V's Prathama Carita, and six structural moments in Module VI's Madhyama/Uttara Caritas. This is on the order of thirty analytical units, not the roughly two thousand the completed series will eventually cover. The proportions reported below should be read as a preliminary pattern visible in the first delivery of each module, not as a settled statistical finding about the Sahasranāma, Triśatī, or Saptaśatī as complete texts. Subsequent deliveries within each module, as they are produced, will either confirm or revise this preliminary picture, and a genuinely complete synthesis chapter is only possible once those deliveries exist.
+</div>
+
+<p>With that caveat fixed firmly in place, a preliminary tally is still worth doing, for the same reason a pilot study is worth running before a full trial: it tells us whether the method is behaving the way Module I predicted it would, and it surfaces which of Module I's falsifiable rules (§4 of that module) are actually doing discriminating work versus which are, so far, undertested.</p>
+</section>
+
+<hr class="ornament">
+
+<section class="chapter" id="distribution">
+<div class="chapter-mark"><span class="chapter-num">२</span><span class="chapter-eyebrow">Part Two</span></div>
+<h2 class="chapter-title">The Distribution by Text, as Delivered So Far<span class="dn">ग्रन्थानुसारं वितरणम्</span></h2>
+
+<div class="bar-legend">
+  <span><i class="converge"></i> Converge</span>
+  <span><i class="partial"></i> Partial</span>
+  <span><i class="diverge"></i> Diverge</span>
+</div>
+
+<div class="bar-chart">
+  <div class="bar-row">
+    <div class="bar-label">Module I (worked examples)</div>
+    <div class="bar-track"><div class="bar-fill"><div class="bar-seg converge" style="width:33%"></div><div class="bar-seg partial" style="width:34%"></div><div class="bar-seg diverge" style="width:33%"></div></div></div>
+    <div class="bar-total">n=3</div>
+  </div>
+  <div class="bar-row">
+    <div class="bar-label">Sahasranāma Part A</div>
+    <div class="bar-track"><div class="bar-fill"><div class="bar-seg converge" style="width:22%"></div><div class="bar-seg partial" style="width:45%"></div><div class="bar-seg diverge" style="width:33%"></div></div></div>
+    <div class="bar-total">n=9</div>
+  </div>
+  <div class="bar-row">
+    <div class="bar-label">Sahasranāma Part B</div>
+    <div class="bar-track"><div class="bar-fill"><div class="bar-seg converge" style="width:25%"></div><div class="bar-seg partial" style="width:25%"></div><div class="bar-seg diverge" style="width:50%"></div></div></div>
+    <div class="bar-total">n=4</div>
+  </div>
+  <div class="bar-row">
+    <div class="bar-label">Triśatī</div>
+    <div class="bar-track"><div class="bar-fill"><div class="bar-seg partial" style="width:20%"></div><div class="bar-seg diverge" style="width:80%"></div></div></div>
+    <div class="bar-total">n=5</div>
+  </div>
+  <div class="bar-row">
+    <div class="bar-label">Māhātmyam, Prathama</div>
+    <div class="bar-track"><div class="bar-fill"><div class="bar-seg converge" style="width:20%"></div><div class="bar-seg partial" style="width:80%"></div></div></div>
+    <div class="bar-total">n=5</div>
+  </div>
+  <div class="bar-row">
+    <div class="bar-label">Māhātmyam, Madhyama/Uttara</div>
+    <div class="bar-track"><div class="bar-fill"><div class="bar-seg converge" style="width:17%"></div><div class="bar-seg partial" style="width:66%"></div><div class="bar-seg diverge" style="width:17%"></div></div></div>
+    <div class="bar-total">n=6</div>
+  </div>
+</div>
+
+<p>Two patterns are visible even at this small sample size, and both were anticipated in earlier modules rather than discovered here for the first time. First, the Triśatī — the most densely mantra-technical and theologically compressed of the texts covered — shows the heaviest Diverge skew, exactly as Module IV's own closing tally predicted for a text with no narrative or bodily-description scaffolding to anchor kośa-descent. Second, narrative material (the two Māhātmyam Caritas) shows the heaviest Partial concentration of any text surveyed, because narrative structural moments — a sleep transition, a shape-shift, a self-replicating wound — are almost never purely vastu-level or purely annamaya; they tend to combine an embodied, checkable surface detail with a metaphysical point the surface detail only partially carries, which is the textbook condition for a Partial tag rather than a clean Converge or Diverge.</p>
+
+<div class="tally-wrap">
+<table class="tally-table">
+  <tr><th>Unit</th><th>Text / Module</th><th>Kośa-Tag</th><th>Verdict</th></tr>
+  <tr><td class="tt-unit">Kuṇḍalinī</td><td>Sahasranāma / Mod. I</td><td>prāṇamaya</td><td><span class="cn-tag partial">Partial</span></td></tr>
+  <tr><td class="tt-unit">Raktavarṇā</td><td>Māhātmyam epithet / Mod. I</td><td>annamaya</td><td><span class="cn-tag converge">Converge</span></td></tr>
+  <tr><td class="tt-unit">Saccidānandarūpiṇī</td><td>Sahasranāma / Mod. I</td><td>beyond ānandamaya</td><td><span class="cn-tag diverge">Diverge</span></td></tr>
+  <tr><td class="tt-unit">Rāgasvarūpapāśāḍhyā / Krodhākārāṅkuśojjvalā</td><td>Sahasranāma 24 / Mod. II</td><td>manomaya</td><td><span class="cn-tag converge">Converge</span></td></tr>
+  <tr><td class="tt-unit">Pīnonnatakucadvayī</td><td>Sahasranāma 41 / Mod. II</td><td>annamaya</td><td><span class="cn-tag converge">Converge</span></td></tr>
+  <tr><td class="tt-unit">Mātṛkāvarṇarūpiṇī</td><td>Sahasranāma / Mod. III</td><td>manomaya / prāṇamaya</td><td><span class="cn-tag converge">Converge</span></td></tr>
+  <tr><td class="tt-unit">Prajñānaghanarūpiṇī</td><td>Sahasranāma 999 / Mod. III</td><td>vastu-level</td><td><span class="cn-tag diverge">Diverge</span></td></tr>
+  <tr><td class="tt-unit">Hrīṅkārī</td><td>Triśatī / Mod. IV</td><td>prāṇamaya (vāk-bridge)</td><td><span class="cn-tag partial">Partial</span></td></tr>
+  <tr><td class="tt-unit">Sarvajñā</td><td>Triśatī / Mod. IV</td><td>vijñānamaya</td><td><span class="cn-tag diverge">Diverge</span></td></tr>
+  <tr><td class="tt-unit">Brahmā's Stuti (waking precondition)</td><td>Māhātmyam / Mod. V</td><td>vastu-level, prāṇamaya bridge</td><td><span class="cn-tag converge">Converge</span></td></tr>
+  <tr><td class="tt-unit">Kālī's brow-emergence</td><td>Māhātmyam / Mod. VI</td><td>manomaya</td><td><span class="cn-tag partial">Partial</span></td></tr>
+  <tr><td class="tt-unit">"Kā Tvam" — Śumbha's question</td><td>Māhātmyam / Mod. VI</td><td>vastu-level</td><td><span class="cn-tag diverge">Diverge</span></td></tr>
+</table>
+</div>
+
+</section>
+
+<hr class="ornament">
+
+<section class="chapter" id="kosha-correlation">
+<div class="chapter-mark"><span class="chapter-num">३</span><span class="chapter-eyebrow">Part Three</span></div>
+<h2 class="chapter-title">Kośa-Depth as the Real Predictor, Not Text of Origin<span class="dn">कोशगाम्भीर्यमेव भविष्यवाचकम्, न ग्रन्थः</span></h2>
+<p class="chapter-lede">Regrouping the same twelve units above by kośa-tag rather than by source text makes the pattern considerably sharper than the by-text grouping does.</p>
+
+<div class="tally-wrap">
+<table class="tally-table">
+  <tr><th>Kośa-Tag</th><th>n</th><th>Converge</th><th>Partial</th><th>Diverge</th></tr>
+  <tr><td class="tt-unit">Annamaya</td><td class="tt-num">2</td><td class="tt-num">2</td><td class="tt-num">0</td><td class="tt-num">0</td></tr>
+  <tr><td class="tt-unit">Prāṇamaya</td><td class="tt-num">2</td><td class="tt-num">0</td><td class="tt-num">2</td><td class="tt-num">0</td></tr>
+  <tr><td class="tt-unit">Manomaya</td><td class="tt-num">3</td><td class="tt-num">2</td><td class="tt-num">1</td><td class="tt-num">0</td></tr>
+  <tr><td class="tt-unit">Vijñānamaya</td><td class="tt-num">1</td><td class="tt-num">0</td><td class="tt-num">0</td><td class="tt-num">1</td></tr>
+  <tr><td class="tt-unit">Vastu-level / beyond</td><td class="tt-num">3</td><td class="tt-num">0</td><td class="tt-num">0</td><td class="tt-num">3</td></tr>
+  <tr><td class="tt-unit">Vastu-level w/ prāṇamaya bridge</td><td class="tt-num">1</td><td class="tt-num">1</td><td class="tt-num">0</td><td class="tt-num">0</td></tr>
+</table>
+</div>
+
+<p>Read plainly: every annamaya-tagged unit in the sample converged; every pure vastu-level unit diverged without exception; manomaya-tagged units split toward Converge but not uniformly; and the single vijñānamaya unit (Sarvajñā) diverged, consistent with Module I's prediction that vijñānamaya sits close enough to the ānandamaya boundary that convergence becomes the exception rather than the rule. The one apparent anomaly — a vastu-level unit (Brahmā's request for Yoganidrā's withdrawal) converging rather than diverging — is explained by its own tag: it is vastu-level <em>with an explicit prāṇamaya bridge</em>, meaning the narrative gives the vastu-level claim a specific, concrete physiological handle (the graded, non-instantaneous character of waking) that pure vastu-level units like Prajñānaghanarūpiṇī or Saccidānandarūpiṇī simply do not offer. This is exactly the kind of exception a falsifiable rule should produce: not a counterexample to Method Rule 1, but a demonstration that the rule is tracking something real — presence or absence of a bridge, not the vastu/kośa label alone, is what determines whether a correlate is available.</p>
+
+<div class="margin-note">A methodological note for the deliveries still to come: if this pattern holds at larger sample sizes, Modules II through VI's remaining deliveries can use the kośa-tag assigned to each entry (already a required first step under Pass 1 of the tri-lens template, Module I §3) as a genuine prediction to test against, rather than only as a classificatory label applied after the fact. A kośa-tag of annamaya or manomaya predicting Converge/Partial, and a tag of vastu-level or vijñānamaya predicting Diverge, is a concrete, falsifiable expectation the remaining ~1,970 units can either bear out or overturn.</div>
+
+</section>
+
+<hr class="ornament">
+
+<section class="chapter" id="strongest">
+<div class="chapter-mark"><span class="chapter-num">४</span><span class="chapter-eyebrow">Part Four</span></div>
+<h2 class="chapter-title">The Strongest Converge Cases, Compared Side by Side<span class="dn">दृढतमसङ्गमनिदर्शनानि</span></h2>
+<p class="chapter-lede">Three entries across the delivered material meet the full Rule-for-Converge bar set out in Module I §4 — matching kośa-depth, an independently replicated finding (not a single study), and genuine identity of the underlying phenomenon rather than metaphorical resemblance. Set side by side, they share a structural feature worth naming explicitly.</p>
+
+<p>Mātṛkāvarṇarūpiṇī's articulatory-phonetics correlate (Module III), the rāga/krodha approach-avoidance correlate (Sahasranāma nāma 24, Module II), and the mammary-oxytocin correlate (Pīnonnatakucadvayī, Module II) are the three strongest Converge cases the series has produced so far. What they share is that each names a process — speech articulation, approach/avoidance motivation, lactation/bonding — that is simultaneously (a) something the Sanskrit tradition classified in fine-grained technical detail centuries before modern anatomy or neuroscience existed, and (b) something modern anatomy or neuroscience has independently, and for entirely unrelated reasons, also mapped in fine-grained technical detail. Convergence in this series is strongest not where a name gestures vaguely at embodiment, but where two independent technical traditions — one Sanskritic and pre-modern, one biomedical and modern — happened to both develop detailed, checkable classifications of the exact same physical process. This is a useful diagnostic for the remaining deliveries: the search for further strong-Converge candidates should prioritize nāmas and verses with this same double-technicality signature (Śāstric anatomical/phonetic/physiological precision meeting a well-mapped modern literature), rather than nāmas that are merely evocative of the body in a general way.</p>
+
+<div class="callout">
+<span class="callout-tag">A Predicted Location for Future Strong-Converge Candidates</span>
+Based on this pattern, this series predicts — as a falsifiable claim later deliveries can check — that further strong Converge cases will cluster disproportionately around: (1) the remaining Saundaryalaharī-linked body-description nāmas in the unfinished portion of Sahasranāma Part A, since these combine named anatomy with the Module I cakra table's own physiological/neuroscientific correlates; (2) any further mātṛkā/phoneme material in the Triśatī's remaining bīja-clusters, since articulatory phonetics is this series' single richest vein so far; and (3) further Saptaśatī combat-narrative moments structurally similar to the sleep-inertia and approach/avoidance findings already surfaced in Modules V and VI. Vastu-level and vijñānamaya-dominant material — the mahāvākya cluster's remaining names, and the bulk of the Triśatī's kāma/sarva- clusters — is predicted to continue skewing Diverge.
+</div>
+
+</section>
+
+<hr class="ornament">
+
+<section class="chapter" id="closing">
+<div class="chapter-mark"><span class="chapter-num">५</span><span class="chapter-eyebrow">Closing</span></div>
+<h2 class="chapter-title">What Diverge Is For<span class="dn">विभेदस्य प्रयोजनम्</span></h2>
+<p class="chapter-lede">Module I insisted, before a single nāma had been analyzed, that Diverge is not a defeat for either the traditional or the scientific side. The delivered material gives that claim some content rather than leaving it as a promise.</p>
+
+<p class="lead-para">Every Diverge tag produced so far shares one feature: the Vedāntic pass, examined on its own terms via dṛg-dṛśya-viveka, is found to be making a claim about the sākṣī, or about Devī's unconditioned nature, that no measurement of a conditioned state — however sophisticated the measurement — could in principle confirm or disconfirm, because measurement itself operates entirely within the dṛśya domain. This is not a special pleading invented to protect these particular claims from scrutiny; it is the same reasoning the Vivekacūḍāmaṇi applies to the body, the prāṇa, and the manas in its second discrimination (Module I, §1.2), applied consistently to whatever nāma or verse the series encounters at that depth. A reader who wanted every name to converge with some neural or anatomical finding would have to either force strained correlates onto entries like Saccidānandarūpiṇī or Prajñānaghanarūpiṇī — the exact error Module I's Method Rule 1 exists to block — or quietly reclassify those entries as making a lesser, kośa-level claim than the text's own grammar supports. Diverge, honestly tagged, is what remains once both of those temptations are refused.</p>
+
+<p>The reverse error is equally real and equally avoided here: a reader determined to debunk the tradition could point to the heavy Diverge skew in the Triśatī or the Sahasranāma's mahāvākya cluster as evidence the material is "unfalsifiable" in a pejorative sense. But unfalsifiability is only a defect when a claim presents itself as an empirical one while evading the empirical test that would settle it. The vastu-level nāmas examined here do not present themselves that way; on their own terms, and on Śaṅkara's own terms in the source text this series has used as its method throughout, they are explicitly claims about what lies prior to and outside any possible object of measurement. Tagging them Diverge is not a failure to find evidence for an empirical claim — it is an accurate description of a non-empirical one, stated as plainly and non-evasively as the tri-lens template can manage.</p>
+
+<div class="callout warn">
+<span class="callout-tag">Standing Task for the Completed Series</span>
+This synthesis chapter is, by its own count, based on roughly thirty of the approximately two thousand units the full series intends to cover. Its conclusions — kośa-depth as the primary predictor of convergence, the double-technicality signature of the strongest Converge cases, and the consistent, non-evasive character of the Diverge tag — are offered as the current best reading of a small sample, to be revised, sharpened, or overturned as Modules II through VI's remaining deliveries are produced and folded back into an eventual complete tally. That completed tally, not this preliminary one, is what would actually settle the question Module I opened with: where, across the full body of Devī nāma-valī literature, is the tradition making a testable claim, and where is it deliberately pointing past testability altogether.
+</div>
+
+</section>
+
+</main>
+
+<footer>
+  <span class="fdn">इति सप्तमं प्रकरणम्, समाप्तं चेदम् प्रथमं आवर्तनम्</span>
+  Tridhā Darpaṇam · Module VII of VII — Preliminary Synthesis · shastrasextvakfive.culturalmusings.com · Cultural Musings Research
+</footer>
 
 </body>
 </html>
-
-
